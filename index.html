@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="headlogo">e-Chat</div>
+        <div class="navlinks">
+            <a href="">Features</a>
+            <a href="">Help Center</a>
+            <a href="">Blog</a>
+            <a href="">For Business</a>
+        </div>
+        <div class="logbutton">
+            <a href="#" id="log1">Log in &nbsp;&nbsp; <span>&#10095;</span></a>
+            <a href="#" id="reg1">Register</a>
+        </div>
+    </header>
+    <section>
+     <main>
+        <article>
+            <div class="imgdiv">
+                <h1>Message <br> Privately</h1>
+                <p class="imgdivp2">Most people are nice and just want to <br>have a chat</p>
+                <button id="logbut">Get Started&nbsp;&nbsp; <span>&#10095;</span></button>
+            </div>
+        </article>
+        <aside></aside>
+      </main>
+        <div class="loginform"> 
+            <div class="formlog">
+               <h1>Welcome Back!</h1>
+               <h4>Log in to your account</h4>
+               <form action="">
+                   <div>
+                       <label for="">Enter Your Email</label><br><br>
+                       <input type="text" placeholder="Enter email id" required>
+                   </div>
+                   <div>
+                       <label for="">Enter Password</label><br><br>
+                       <input type="password" placeholder="Enter your Password" required>
+                   </div>
+                   <a href="" style="text-align: right;">Forgot Password?</a><br>
+                   <button class="butt">Log In</button>
+               </form>
+               <p style="color: rgb(86, 80, 80);">Don't have an account? <a href="" class="logregform"> Register here</a> </p>
+            </div>
+        </div>
+        <div class="regform">
+             <div class="formreg">
+               <h1>Create Account</h1>
+               <h4>Register to get started</h4>
+                 <form class="reg-form">
+                     <div>
+                         <label>Enter Your Name</label><br><br>
+                         <input type="text" placeholder="Enter full name">
+                     </div>
+         
+                     <div>
+                         <label>Enter Your Email</label><br><br>
+                         <input type="email" placeholder="Enter email id">
+                     </div>
+         
+                     <div>
+                         <label>Create Password</label><br><br>
+                         <input type="password" placeholder="Create password">
+                     </div>
+         
+                     <div>
+                         <label>Confirm Password</label><br><br>
+                         <input type="password" placeholder="Confirm password">
+                     </div>
+         
+                     <button class="butt reg-butt">Register</button>
+                 </form>
+                 <p style="color: rgb(75, 72, 72);">
+                     Already have an account?
+                     <a href="#" class="reglogform"> Login here</a>
+                 </p>
+             </div>
+      </div>
+    </section>
+</body>
+<script>
+    const loginBtn = document.getElementById("log1");
+    const registerBtn = document.getElementById("reg1");
+    const getstartloginBtn = document.getElementById("logbut");
+    const loginForm = document.querySelector(".loginform");
+    const regForm = document.querySelector(".regform");
+    const rlf = document.querySelector(".reglogform");
+    const lrf = document.querySelector(".logregform");
+    // Utility: hide both forms
+    function hideAllForms() {
+        loginForm.style.display = "none";
+        regForm.style.display = "none";
+    }
+
+    // LOGIN button
+    loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        hideAllForms();                 // hide everything first
+        loginForm.style.display = "flex";  // show ONLY login
+
+        loginForm.scrollIntoView({ behavior: "smooth" });
+    });
+    //Get Started Register
+    getstartloginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        hideAllForms();                 // hide everything first
+        regForm.style.display = "flex";  // show ONLY login
+
+        regForm.scrollIntoView({ behavior: "smooth" });
+    });
+
+    // REGISTER button
+    registerBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        hideAllForms();                // hide everything first
+        regForm.style.display = "flex";   // show ONLY register
+
+        regForm.scrollIntoView({ behavior: "smooth" });
+    });
+    //Register-login form
+    rlf.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        hideAllForms();                // hide everything first
+        loginForm.style.display = "flex";   // show ONLY register
+
+        loginForm.scrollIntoView({ behavior: "smooth" });
+    });
+    //Login-register form
+    lrf.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        hideAllForms();                // hide everything first
+        regForm.style.display = "flex";   // show ONLY register
+
+        regForm.scrollIntoView({ behavior: "smooth" });
+    });
+    // Optional: click outside to close
+    loginForm.addEventListener("click", function (e) {
+        if (e.target === loginForm) {
+            hideAllForms();
+        }
+    });
+
+    regForm.addEventListener("click", function (e) {
+        if (e.target === regForm) {
+            hideAllForms();
+        }
+    });
+</script>
+
+</html>

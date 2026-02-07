@@ -1,0 +1,333 @@
+ *{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        body{
+            margin: 0%;
+            box-sizing: border-box;
+            background-color: rgb(180, 168, 168);
+        }
+        header{
+            display: flex;
+            align-items: center;
+            padding: 1em 2.5em;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            right: 0;
+            box-sizing: border-box;
+            background-color: rgb(77, 75, 75);
+            flex-wrap: wrap;
+        }
+        .headlogo{
+            background-size: 150px;
+            background-position: right;
+            background-repeat: no-repeat;
+            font-size: x-large;
+            font-weight: 600;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color:  rgb(149, 143, 143);
+            padding: 2px 1em;
+            border-radius: 0px 25px 25px 0px;
+            margin-left: -1.6em;
+            grid-area: headlogo;
+        }
+        .navlinks{
+            margin-left: auto;
+            display: flex;
+            gap: 2em; 
+            grid-area: navlinks;
+        }
+        .navlinks a{
+            text-decoration: none;
+            color: rgb(231, 225, 225);
+        }
+        .navlinks a:hover{
+            transform: scale(1.1);
+            transition: .2s ease;
+            border-bottom: 1px solid ;
+        }
+        .logbutton{
+            margin-left: auto;
+            grid-area: logbutton;
+        }
+        .logbutton a{
+            text-decoration: none;
+            color: black;
+            padding: 11px 23px;
+            margin: 0px 0px 0px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        #reg1{
+            background-color:  rgb(0, 0, 0);
+            color: white;
+            border: 2px solid;
+        }
+        #reg1:hover{
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 2px solid transparent;
+        }
+        #log1{
+            background-color: rgb(255, 255, 255);
+        }
+        #log1:hover{
+            background-color:rgba(255, 255, 255,0.7);
+        }
+        main{
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            height: auto;
+            padding-top: 8em;
+            background: linear-gradient(to left,rgba(0,0,0,0.7),rgba(0,0,0,0.6),rgba(0,0,0,0.5),rgba(0,0,0,0.4),rgba(0,0,0,0.3),rgba(0,0,0,0.2),rgba(0,0,0,0.1));
+        }
+        aside{
+            min-height: 79vh;
+            background-image: url(./bgtemp3.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        article{
+            display: flex;
+            justify-content: center;
+            padding-top: 5em;
+        }
+        .imgdiv{
+            height: 60vh;
+            box-sizing: border-box;
+            padding: 1em;
+        }
+        .imgdiv h1{
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0%;
+            padding: 0%;
+            font-size: 75px;
+            color: rgb(0, 0, 0);
+            font-weight: 400;
+        }
+        .imgdiv p{
+            font-size: 18px;
+            padding-bottom: 2em;
+            color: rgba(0,0,0,0.4);
+            line-height: 1.5;
+            font-family: "Bitcount Prop Single", system-ui;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        #logbut{
+            font-weight: 600;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: medium;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.5);
+            color: rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+        #logbut:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .loginform{
+            display: none;
+            justify-content: center;
+            height: 110vh;
+            align-items: center;
+            color: white;
+        }
+        .formlog{
+            display: inline-block;
+            width: auto;
+            padding: 3em;
+            border-radius: .5em;
+            background-color: rgba(0,0,0,0.1);
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+        .formlog h1{
+            margin: 0%;
+            font-size: 2.5em;   
+            color: rgba(0, 0, 0, 0.6);         
+        }
+        .formlog h4{
+            padding-bottom: 3em;
+            letter-spacing: .5px;
+            color: rgba(32, 31, 31, 0.6)
+        }
+        .formlog a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: small;
+            font-weight: 600;
+        }
+        .formlog a:hover{
+            color: rgba(0,0,0,1);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        form div label{
+            color: rgb(0, 0, 0);
+        }
+        form div input{
+            width: 25em;
+            border-radius: 5px;
+            border: 1px solid rgba(0,0,0,0.3);
+            padding: 1em;
+            background-color: rgba(255,255,255,0.4);
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        form div input:focus{
+            border-color: rgba(0,0,0,0.7);
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+        }
+        .butt{
+            padding: .8em;
+            font-size: large;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(0,0,0,0.4);
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+        }
+        .butt:hover{
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .regform{
+            display: none;
+            justify-content: center;
+            height: 130vh;
+            align-items: center;
+            color: white;
+        }
+        .formreg{
+            display: inline-block;
+            width: auto;
+            padding: 3em;
+            border-radius: .5em;
+            background-color: rgba(0,0,0,0.1);
+            border: 3px solid rgba(0, 0, 0, 0.2);
+        }
+        .regform a{
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: small;
+            font-weight: 600;    
+        }
+        .regform h1{
+            margin: 0%;
+            font-size: 2.5em;   
+            color: rgba(0, 0, 0, 0.6);   
+        }
+        .regform h4{
+            padding-bottom: 3em;
+            letter-spacing: .5px;
+            color: rgba(32, 31, 31, 0.6)         
+        }
+        .formreg p a:hover{
+            color: rgba(0,0,0,1);
+        }
+        @media(max-width:70em){
+            aside{
+                background-size: 750px;
+            }
+        }
+        @media(max-width:64em){
+            header{
+                display: grid;
+                grid-template-columns: 1fr 3fr ;
+                row-gap: 2em;
+                grid-template-areas: 
+                "headlogo logbutton"
+                "navlinks navlinks"
+                ;
+                padding-bottom: 1.5em;
+            }
+            .headlogo{
+                max-width: 3.5em;
+            }
+            .navlinks{
+                justify-content: center;
+                gap: 4em;
+                margin-left: 0;
+            } 
+            aside{
+                background-size: 650px;
+            }
+        }
+        @media(max-width:59em){
+            aside{
+                background-size: 600px;
+            }
+        }
+        @media(max-width:52.2em){
+            header{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                row-gap: 2em;
+                grid-template-areas: 
+                "headlogo logbutton"
+                "navlinks navlinks"
+                ;
+                padding-bottom: 1.5em ;
+            } 
+            .headlogo{
+                max-width: 3.5em;
+            }  
+            aside{
+               background-size: 500px;
+            }  
+        }
+        @media(max-width:730px){
+            aside{
+                background-image: none;
+            }
+            main{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        @media(max-width:35em){
+            .navlinks{
+                gap: 2em;
+            }
+            .logbutton a{
+               padding: 7px 15px;
+               font-size: small;
+            }
+        }
+        @media(max-width:28em){
+            header{
+                padding: 1em;
+            }
+            .headlogo{
+                font-size: medium;
+                padding: .15em 1em;
+            }
+            .navlinks a{
+                font-size: small;
+            }
+            .navlinks{
+                gap: 1.5em;
+            }
+            article .imgdiv{
+                width: 20em;
+            }
+            .formlog{
+                padding:2em 2em;
+                max-width: 40em;
+            }
+            form div input{
+                width: 20em;
+            }
+            .formreg{
+                padding:3em 2em 2em 2em;
+                max-width: 40em;
+            }
+        }
