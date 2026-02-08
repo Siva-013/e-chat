@@ -1,0 +1,251 @@
+*{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background-color: rgb(135, 128, 128);
+        }
+        section{
+            display: grid;
+            height:100vh;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 3em 1fr;
+            grid-template-areas:
+            "nav nav"
+            "aside art";
+            gap: 1em;
+        }
+        .material-icons{
+            font-size: 20px;
+            cursor: pointer;
+            user-select: none;
+        }        
+        nav,aside,article{
+            border: none;
+            border-radius: 8px;
+        }
+        nav{
+            grid-area: nav;
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            background-color: rgba(53, 60, 65,0.8);
+            color: rgb(192, 193, 193);
+        }
+        nav header h1{
+            font-size: x-large;
+        }
+        .navlinks{
+            margin-left: auto;
+        }
+        .searchdiv{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+        .searchdiv input{
+            border-radius: 8px;
+            padding: .3em 2em ;
+            border: 1px solid;
+        }
+        aside{
+            grid-area: aside;
+            min-height: 0;
+            display: grid;
+            grid-template-rows: 3rem 2em auto 4em;
+        }
+        article{
+            grid-area: art;
+            display: grid;
+            grid-template-rows:auto 1fr auto;
+            min-height: 0;
+        }
+        .listhscrolltop p{
+            margin: 0;
+            padding: 1em;
+            background-color: rgb(53, 60, 65);
+            color: rgb(192, 193, 193) ;
+            border-radius: 8px 8px 0px 0px;
+            font-size: 18px;
+        }
+        .listhscroll{
+            display: flex;
+            overflow-x: auto;
+            max-width: 42vh;
+            gap: .5em;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding: 0em 1em;
+            background-color: rgb(53, 60, 65);
+        }        
+        .listhscroll a{
+            white-space: nowrap;
+            text-decoration: none;
+            color: rgb(146, 150, 150);
+            flex-shrink: 0;
+            padding: 0em .5em;
+        }
+        .listhscroll a:active{
+            border-bottom: 2px solid rgb(228, 223, 221);
+            color:rgb(228, 223, 221) ;
+        }
+         .listhscroll a:hover{
+            border-bottom: 2px solid rgb(228, 223, 221);
+            color:rgb(228, 223, 221) ;
+        }
+        .contactslist{
+            display: grid;
+            row-gap: .3em;
+            height: 75vh;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            background-color: rgb(190, 181, 181)
+        }
+        .contactslist::-webkit-scrollbar {
+            display: none;
+        }   
+        .listhscroll::-webkit-scrollbar {
+            display: none;
+        }
+        .contacts{
+            display: flex;
+            padding: .5em 1.5em;
+            align-items: center;
+            column-gap: .7em;
+        }
+        .contacts:hover{
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .contacts.active{
+            background-color: rgba(0,0,0,0.05);
+            border-radius: 6px;
+        }
+        .contactphoto{
+            flex: 1;
+            width: clamp(36px, 4vw, 44px);
+            height: clamp(36px, 4vw, 47px);
+            flex-shrink: 0;     
+            border-radius: 50%;
+            background-image: url(./profile_photo.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .contactinfo{
+            flex: 5.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contactinfo h1{
+            margin: 0 0 2px 0;
+            font-size: medium;
+        }
+        .contactinfo p{
+            margin: 0%;
+            font-size: small;
+            padding-bottom: 2px;
+        }
+        .accountdetails{
+            background-color: rgb(53, 60, 65);
+            padding: .4em 1em;
+            color: rgb(192, 193, 193);
+            border-radius: 0px 0px 8px 8px;
+        }
+        .chatheader{
+            display: flex;
+            align-items:center;
+            border-bottom: 1px solid rgba(0,0,0,0.4);
+            padding: 1em;
+            background-color: rgb(53, 60, 65);
+            color: rgb(192, 193, 193);
+            border-radius: 8px 8px 0px 0px;
+        }
+        .chatcontactname h1{
+            margin: 0%;
+            font-size: large;
+        }
+        .chatheaderlinks{
+            margin-left: auto;
+            display: flex;
+            gap: 1em;
+        }
+        .chatheaderlinks a span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:.4em;
+            border-radius: 25px;
+            color: rgb(192, 193, 193);
+            background-color: rgba(0,0,0,0.8);
+        }
+        .chatheaderlinks a{
+            text-decoration: none;
+        }
+        .chatinput{
+            display: flex;
+            padding: .7em;
+            border-top: 1px solid rgba(0,0,0,0.4);
+            gap: 1em;
+            background-color: rgb(53, 60, 65);
+            border-radius: 0px 0px 8px 8px;
+        }
+        .chatinput input{
+            width: 100%;
+            border-radius: 30px;
+            border: none;
+            padding-left: 1em;
+            background-color: rgba(0,0,0,0.5);
+            color:rgb(192, 193, 193) ;
+
+        }
+        .chatinput button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:.7em;
+            border-radius: 25px;
+            border: none;
+            background-color: rgba(0,0,0,0.8);
+            
+        }
+        .chatinput button span{
+            color: rgb(192, 193, 193);
+        }
+        .chatbody {
+            padding: 2em 1em;
+            overflow-y: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            background-color: rgb(96, 92, 92);
+        }
+        .message {
+            max-width: 70%;              /* limit width of the bubble */
+            padding: 0.5em 1em;
+            border-radius: 12px;
+            word-wrap: break-word;       /* break long words */
+            overflow-wrap: break-word;   /* modern browsers */
+            white-space: pre-wrap;       /* preserve line breaks */
+            position: relative;
+            display: inline-block;
+        }
+        .message.sent {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            align-self: flex-end;        /* align to right */
+            text-align: right;           /* timestamp on the right */
+        }
+        .message.received {
+            background-color: #fff;
+            align-self: flex-start;      /* align to left */
+            text-align: left;            /* timestamp on the left */
+        }
+        .message .time {
+            display: block;
+            font-size: 0.65em;
+            color: rgb(164, 157, 157);
+            margin-top: 0.2em;
+        }
